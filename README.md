@@ -71,14 +71,14 @@ Challenge: Inconsistent translation quality across different text types, with te
 Solution: Selected the OPUS-MT model specifically trained on diverse multilingual corpora, providing better generalization across various domains and text types.
 
 ## 4. Conclusion
-The development of this English-to-French translation chatbot successfully demonstrates the practical application of modern NLP technologies in solving real-world communication challenges. Through careful implementation of Hugging Face's transformer models, the project achieved several key objectives:
-Technical Achievements:
-•	Successful integration of pre-trained Marian MT models
-•	Implementation of robust error handling and user feedback systems
-•	Development of dual-mode user interfaces for different use cases
-•	Efficient memory management and model optimization
+The development of this English-to-French translation chatbot successfully demonstrates the practical application of modern NLP technologies in solving real-world communication challenges. Through careful implementation of Hugging Face's transformer models, the project achieved several key objectives:<br>
+Technical Achievements:<br>
+•	Successful integration of pre-trained Marian MT models<br>
+•	Implementation of robust error handling and user feedback systems<br>
+•	Development of dual-mode user interfaces for different use cases<br>
+•	Efficient memory management and model optimization<br>
 Learning Outcomes: The project provided invaluable hands-on experience with cutting-edge NLP technologies, from understanding transformer architectures to implementing production-ready translation systems. The process revealed the complexity underlying seemingly simple translation tasks and highlighted the importance of proper software engineering practices in AI applications.
-Future Enhancements: Potential improvements include multi-language support, custom model fine-tuning for domain-specific translations, integration of confidence scoring, and development of web-based interfaces for broader accessibility.
+**Future Enhancements:** Potential improvements include multi-language support, custom model fine-tuning for domain-specific translations, integration of confidence scoring, and development of web-based interfaces for broader accessibility.
 The successful completion of this project establishes a solid foundation for more advanced NLP applications and demonstrates the democratizing effect of pre-trained models in making sophisticated AI capabilities accessible to developers across all skill levels.
 
 ## 5. Reflection: The Power of Hugging Face in NLP Learning
