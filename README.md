@@ -19,12 +19,12 @@ The first step involved setting up the development environment with the necessar
 ### 2.2 Model Architecture Design
 The core translation functionality is encapsulated within the EnglishtoFrench class, designed following object-oriented principles:<br>
 class EnglishtoFrench:<br>
-    def __init__(self, model_name="Helsinki-NLP/opus-mt-en-fr"):<br>
-        self.model_name = model_name<br>
-        self.tokenizer = None<br>
-        self.translator_pipeline = None<br>
-        self.model = None<br>
-        self.load_model()<br>
+    &emsp;def __init__(self, model_name="Helsinki-NLP/opus-mt-en-fr"):<br>
+        &emsp;self.model_name = model_name<br>
+        &emsp;self.tokenizer = None<br>
+        &emsp;self.translator_pipeline = None<br>
+        &emsp;self.model = None<br>
+        &emsp;self.load_model()<br>
 - **Architecture Components:**
   •	**Tokenizer:** Converts raw text into model-readable tokens
   •	**Model:** The pre-trained Marian MT model for translation
@@ -38,9 +38,9 @@ The load_model() method handles the complex process of downloading and initializ
 ### 2.4 Translation Implementation
 The translation process involves several sophisticated steps:<br>
 def translate_text(self, text, max_length=512):<br>
-    if self.translator_pipeline:<br>
-        result = self.translator_pipeline(text, max_length=max_length)<br>
-        return result[0]['translation_text']<br>
+    &emsp;if self.translator_pipeline:<br>
+        &emsp;result = self.translator_pipeline(text, max_length=max_length)<br>
+        &emsp;return result[0]['translation_text']<br>
 **Translation Pipeline:**
 1.	Input text preprocessing and tokenization
 2.	Model inference with attention mechanisms
