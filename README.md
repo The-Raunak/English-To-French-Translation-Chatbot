@@ -36,12 +36,12 @@ The load_model() method handles the complex process of downloading and initializ
 3.	Pipeline Creation: Establishing a streamlined translation workflow
 4.	Error Handling: Implementing robust exception management for network issues
 ### 2.4 Translation Implementation
-The translation process involves several sophisticated steps:
+The translation process involves several sophisticated steps:<br>
 def translate_text(self, text, max_length=512):
     if self.translator_pipeline:
         result = self.translator_pipeline(text, max_length=max_length)
-        return result[0]['translation_text']
-Translation Pipeline:
+        return result[0]['translation_text']<br>
+**Translation Pipeline:**
 1.	Input text preprocessing and tokenization
 2.	Model inference with attention mechanisms
 3.	Output generation using beam search
