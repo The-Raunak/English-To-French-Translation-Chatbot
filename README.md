@@ -18,13 +18,13 @@ The first step involved setting up the development environment with the necessar
 
 ### 2.2 Model Architecture Design
 The core translation functionality is encapsulated within the EnglishtoFrench class, designed following object-oriented principles:<br>
-&emsp;class EnglishtoFrench:
-    &emsp;def __init__(self, model_name="Helsinki-NLP/opus-mt-en-fr"):
-        &emsp;self.model_name = model_name
-        &emsp;self.tokenizer = None
-        &emsp;self.translator_pipeline = None
-        &emsp;self.model = None
-        &emsp;self.load_model()
+&emsp;class EnglishtoFrench:<br>
+    &emsp;def __init__(self, model_name="Helsinki-NLP/opus-mt-en-fr"):<br>
+        &emsp;self.model_name = model_name<br>
+        &emsp;self.tokenizer = None<br>
+        &emsp;self.translator_pipeline = None<br>
+        &emsp;self.model = None<br>
+        &emsp;self.load_model()<br>
         
 - **Architecture Components:**
   •	**Tokenizer:** Converts raw text into model-readable tokens
