@@ -49,26 +49,26 @@ Translation Pipeline:
 
 ### 2.5 User Interface Development
 Two distinct interfaces were implemented:
-Interactive Mode: Real-time conversational interface with continuous input/output loops 
-Demo Mode: Automated testing with predefined phrases showcasing various linguistic scenarios
+**Interactive Mode:** Real-time conversational interface with continuous input/output loops 
+**Demo Mode:** Automated testing with predefined phrases showcasing various linguistic scenarios
 
 ## 3. Challenges and Solutions
 ### 3.1 Model Loading Issues
-Challenge: Initial attempts resulted in None outputs due to the model not being properly loaded before translation attempts.
-Root Cause: The original implementation failed to call load_model() in the main execution flow, leaving the translator pipeline uninitialized.
-Solution: Restructured the class constructor to automatically invoke load_model() during initialization, ensuring the model is always ready for translation tasks.
+**Challenge: **Initial attempts resulted in None outputs due to the model not being properly loaded before translation attempts.
+**Root Cause:** The original implementation failed to call load_model() in the main execution flow, leaving the translator pipeline uninitialized.
+**Solution:** Restructured the class constructor to automatically invoke load_model() during initialization, ensuring the model is always ready for translation tasks.
 ### 3.2 Network Connectivity and Model Access
-Challenge: Intermittent failures when downloading large pre-trained models from Hugging Face Hub, particularly in restricted network environments.
-Solution: Implemented comprehensive error handling with informative user feedback and alternative model suggestions. Added timeout handling and connection retry mechanisms.
+**Challenge:** Intermittent failures when downloading large pre-trained models from Hugging Face Hub, particularly in restricted network environments.
+**Solution:** Implemented comprehensive error handling with informative user feedback and alternative model suggestions. Added timeout handling and connection retry mechanisms.
 ### 3.3 Memory Management
-Challenge: Large transformer models consume significant system memory, potentially causing performance issues on resource-constrained systems.
-Solution: Implemented efficient model loading patterns and added device detection for optimal CPU/GPU utilization. Incorporated model cleanup procedures to free memory when needed.
+**Challenge:** Large transformer models consume significant system memory, potentially causing performance issues on resource-constrained systems.
+**Solution:** Implemented efficient model loading patterns and added device detection for optimal CPU/GPU utilization. Incorporated model cleanup procedures to free memory when needed.
 ### 3.4 Text Encoding Issues
-Challenge: Occasional character encoding problems with special French characters (accents, cedillas) appearing as garbled text.
-Solution: Ensured proper UTF-8 encoding throughout the pipeline and implemented character normalization procedures for consistent text handling.
+**Challenge:** Occasional character encoding problems with special French characters (accents, cedillas) appearing as garbled text.
+**Solution:** Ensured proper UTF-8 encoding throughout the pipeline and implemented character normalization procedures for consistent text handling.
 ### 3.5 Translation Quality Variations
-Challenge: Inconsistent translation quality across different text types, with technical terminology sometimes producing suboptimal results.
-Solution: Selected the OPUS-MT model specifically trained on diverse multilingual corpora, providing better generalization across various domains and text types.
+**Challenge:** Inconsistent translation quality across different text types, with technical terminology sometimes producing suboptimal results.
+**Solution:** Selected the OPUS-MT model specifically trained on diverse multilingual corpora, providing better generalization across various domains and text types.
 
 ## 4. Conclusion
 The development of this English-to-French translation chatbot successfully demonstrates the practical application of modern NLP technologies in solving real-world communication challenges. Through careful implementation of Hugging Face's transformer models, the project achieved several key objectives:<br>
@@ -77,7 +77,7 @@ Technical Achievements:<br>
 •	Implementation of robust error handling and user feedback systems<br>
 •	Development of dual-mode user interfaces for different use cases<br>
 •	Efficient memory management and model optimization<br>
-Learning Outcomes: The project provided invaluable hands-on experience with cutting-edge NLP technologies, from understanding transformer architectures to implementing production-ready translation systems. The process revealed the complexity underlying seemingly simple translation tasks and highlighted the importance of proper software engineering practices in AI applications.
+Learning Outcomes: The project provided invaluable hands-on experience with cutting-edge NLP technologies, from understanding transformer architectures to implementing production-ready translation systems. The process revealed the complexity underlying seemingly simple translation tasks and highlighted the importance of proper software engineering practices in AI applications.<br>
 **Future Enhancements:** Potential improvements include multi-language support, custom model fine-tuning for domain-specific translations, integration of confidence scoring, and development of web-based interfaces for broader accessibility.
 The successful completion of this project establishes a solid foundation for more advanced NLP applications and demonstrates the democratizing effect of pre-trained models in making sophisticated AI capabilities accessible to developers across all skill levels.
 
