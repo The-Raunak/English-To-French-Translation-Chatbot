@@ -13,33 +13,33 @@ The first step involved setting up the development environment with the necessar
   - from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
   - from transformers import MarianTokenizer, MarianMTModel
   - import warnings
-- Key Libraries Used:
-  •	Transformers: Hugging Face's flagship library providing access to pre-trained models
+- **Key Libraries Used:**
+  •	**Transformers:** Hugging Face's flagship library providing access to pre-trained models
 
 ### 2.2 Model Architecture Design
-The core translation functionality is encapsulated within the EnglishtoFrench class, designed following object-oriented principles:
-class EnglishtoFrench:
-    def __init__(self, model_name="Helsinki-NLP/opus-mt-en-fr"):
-        self.model_name = model_name
-        self.tokenizer = None
-        self.translator_pipeline = None
-        self.model = None
-        self.load_model()
-- Architecture Components:
-  •	Tokenizer: Converts raw text into model-readable tokens
-  •	Model: The pre-trained Marian MT model for translation
-  •	Pipeline: High-level interface combining tokenizer and model
+The core translation functionality is encapsulated within the EnglishtoFrench class, designed following object-oriented principles:<br>
+class EnglishtoFrench:<br>
+    def __init__(self, model_name="Helsinki-NLP/opus-mt-en-fr"):<br>
+        self.model_name = model_name<br>
+        self.tokenizer = None<br>
+        self.translator_pipeline = None<br>
+        self.model = None<br>
+        self.load_model()<br>
+- **Architecture Components:**
+  •	**Tokenizer:** Converts raw text into model-readable tokens
+  •	**Model:** The pre-trained Marian MT model for translation
+  •	**Pipeline:** High-level interface combining tokenizer and model
 ### 2.3 Model Loading and Configuration
 The load_model() method handles the complex process of downloading and initializing the pre-trained model:
-1.	Tokenizer Initialization: Loading the MarianTokenizer for text preprocessing
-2.	Model Loading: Downloading and configuring the MarianMTModel
-3.	Pipeline Creation: Establishing a streamlined translation workflow
-4.	Error Handling: Implementing robust exception management for network issues
+  1.	Tokenizer Initialization: Loading the MarianTokenizer for text preprocessing
+  2.	Model Loading: Downloading and configuring the MarianMTModel
+  3.	Pipeline Creation: Establishing a streamlined translation workflow
+  4.	Error Handling: Implementing robust exception management for network issues
 ### 2.4 Translation Implementation
 The translation process involves several sophisticated steps:<br>
-def translate_text(self, text, max_length=512):
-    if self.translator_pipeline:
-        result = self.translator_pipeline(text, max_length=max_length)
+def translate_text(self, text, max_length=512):<br>
+    if self.translator_pipeline:<br>
+        result = self.translator_pipeline(text, max_length=max_length)<br>
         return result[0]['translation_text']<br>
 **Translation Pipeline:**
 1.	Input text preprocessing and tokenization
