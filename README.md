@@ -54,20 +54,20 @@ Two distinct interfaces were implemented:
 
 ## 3. Challenges and Solutions
 ### 3.1 Model Loading Issues
-**Challenge: **Initial attempts resulted in None outputs due to the model not being properly loaded before translation attempts.
-**Root Cause:** The original implementation failed to call load_model() in the main execution flow, leaving the translator pipeline uninitialized.
+**Challenge:** Initial attempts resulted in None outputs due to the model not being properly loaded before translation attempts.<br>
+**Root Cause:** The original implementation failed to call load_model() in the main execution flow, leaving the translator pipeline uninitialized.<br>
 **Solution:** Restructured the class constructor to automatically invoke load_model() during initialization, ensuring the model is always ready for translation tasks.
 ### 3.2 Network Connectivity and Model Access
-**Challenge:** Intermittent failures when downloading large pre-trained models from Hugging Face Hub, particularly in restricted network environments.
+**Challenge:** Intermittent failures when downloading large pre-trained models from Hugging Face Hub, particularly in restricted network environments.<br>
 **Solution:** Implemented comprehensive error handling with informative user feedback and alternative model suggestions. Added timeout handling and connection retry mechanisms.
 ### 3.3 Memory Management
-**Challenge:** Large transformer models consume significant system memory, potentially causing performance issues on resource-constrained systems.
+**Challenge:** Large transformer models consume significant system memory, potentially causing performance issues on resource-constrained systems.<br>
 **Solution:** Implemented efficient model loading patterns and added device detection for optimal CPU/GPU utilization. Incorporated model cleanup procedures to free memory when needed.
 ### 3.4 Text Encoding Issues
-**Challenge:** Occasional character encoding problems with special French characters (accents, cedillas) appearing as garbled text.
+**Challenge:** Occasional character encoding problems with special French characters (accents, cedillas) appearing as garbled text.<br>
 **Solution:** Ensured proper UTF-8 encoding throughout the pipeline and implemented character normalization procedures for consistent text handling.
 ### 3.5 Translation Quality Variations
-**Challenge:** Inconsistent translation quality across different text types, with technical terminology sometimes producing suboptimal results.
+**Challenge:** Inconsistent translation quality across different text types, with technical terminology sometimes producing suboptimal results.<br>
 **Solution:** Selected the OPUS-MT model specifically trained on diverse multilingual corpora, providing better generalization across various domains and text types.
 
 ## 4. Conclusion
